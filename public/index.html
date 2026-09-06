@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Oryndel: Crown of Embers</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="auth-screen" class="screen">
+      <div class="panel">
+        <h1>Oryndel</h1>
+        <p class="subtitle">Crown of Embers</p>
+        <p class="flavor">El reino se despierta tras siglos de silencio.<br>La Corona de Brasas vuelve a arder.</p>
+
+        <div id="auth-form">
+          <input type="email" id="email" placeholder="Email" autocomplete="email" required />
+          <input type="password" id="password" placeholder="Contraseña (mín. 8 caracteres)" autocomplete="current-password" minlength="8" required />
+          <button id="btn-login" type="button">Iniciar Sesión</button>
+          <button id="btn-register" type="button" class="secondary">Crear Cuenta</button>
+        </div>
+        <p id="auth-error" class="error"></p>
+        <p class="hint">Crea una cuenta para guardar tu progreso.<br>Compatible con PC y móvil.</p>
+      </div>
+    </div>
+
+    <div id="char-screen" class="screen hidden">
+      <div class="panel wide">
+        <h2>Tu Aventura</h2>
+        <div id="char-list"></div>
+        <hr style="border-color:#4a3528; margin:1rem 0" />
+        <h3>Nueva Partida</h3>
+        <input type="text" id="char-name" placeholder="Nombre del héroe" maxlength="16" />
+        <select id="char-class">
+          <option value="warrior">Guerrero — hoja y escudo</option>
+          <option value="mage">Arcanista — magia de la Antigua Era</option>
+          <option value="ranger">Caminante — arco y rastros</option>
+          <option value="rogue">Sombra — dagas y sigilo</option>
+        </select>
+        <button id="btn-create-char" type="button">Comenzar</button>
+        <p id="char-error" class="error"></p>
+        <button id="btn-logout" type="button" class="secondary" style="margin-top:1rem">Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
